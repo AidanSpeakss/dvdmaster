@@ -32,9 +32,6 @@
 <p id="score">Total Moves: <i></i></p>
 <p id="level">Level: <i></i></p>
 <button id="start">Start Game</button>
-<div id="bigGameMsg">
-</div>
-
 <div id="overlay" class="blur">
 <canvas id="gameCanvas">
     <script src="app.js"></script>
@@ -50,7 +47,7 @@
     }
 
     document.body.querySelector("#start").addEventListener('click', function(){
-        startFlag = true;
+        start = true;
         document.querySelector("#start").style.display = "none";
         document.querySelector("#level").style.display = "block";
         document.querySelector("#score").style.display = "block";
@@ -61,7 +58,7 @@
     window.addEventListener('resize', resize);
     resize();
     window.addEventListener('load', function(){
-    if (document.body.clientWidth >= currentLogo.width * 3 && document.body.clientHeight >= currentLogo.height * 3)
+    if (document.body.clientWidth >= img.width * 3 && document.body.clientHeight >= img.height * 3)
             document.querySelector("#start").style.display = "block";
     });
 </script>
