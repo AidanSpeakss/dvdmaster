@@ -205,7 +205,7 @@
                         scaleVariation: 0.8
                     }
                 );
-                gameMsg.innerHTML = "Congrats! The more levels you complete the faster the ball moves."
+                gameMsg.innerHTML = "Congrats! The more levels you complete the faster the logo moves."
                 gameMsg.style.display = "block";
                 gameMsg.style.opacity = "100%";
                 setTimeout(function () {
@@ -219,7 +219,7 @@
 
                     //worry about adding a fancy visual cue for the glitched corner later
                     brokenCornerFlag = true;
-                    bigGameMsg.innerHTML = "Congrats! The more levels you complete the faster the ball moves."
+                    bigGameMsg.innerHTML = "Congrats! The more levels you complete the faster the logo moves."
                     bigGameMsg.style.display = "block";
                     bigGameMsg.style.opacity = "100%";
                 }
