@@ -1,6 +1,6 @@
 # Play Here: https://aidanspeakss.github.io/dvd-logo-game/
 
-# DVD Logo Mini-Game
+# DVD Logo Mini-Game - InDev Branches
 A game based on the DVD Screensaver meme! Take control of the logo and try to make it hit the corner in as little moves as possible!
 
 ## How to Play   
