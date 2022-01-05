@@ -1,4 +1,3 @@
-
 //-------------------------------
 //--- begin  variable init ------
 //-------------------------------
@@ -27,7 +26,7 @@
     //array of dvd logo img's (experimenting with storing in data uri right now)
     let currentLogo = new Image();
     let arrLogoImages = ["dvdLogo1.png", "dvdLogo2.png", "dvdLogo3.png", "dvdLogo4.png", "dvdLogo5.png"]
-    currentLogo.src = arrLogoImages[(Math.floor(Math.random() * 4 + 1))]; // gets random color to start game with
+    currentLogo.src = arrLogoImages[(Math.floor(Math.random() * 4 + 1))]; //gets random color to start game with
 
     //logo size
     let logoWidth = 300;
@@ -50,16 +49,16 @@
 //-- begin game init ------
 //-------------------------
 
-    // sets logo position to middle of canvas
+    //sets logo position to middle of canvas
     //using the documents width/height because canvas height and width is inaccurate when this is set
     logoPositionX = document.body.clientWidth / 2;
     logoPositionY = document.body.clientHeight / 2;
 
-    // random logo starting speed (between 50 and 100 pixels per a second)
+    //random logo starting speed (between 50 and 100 pixels per a second)
     logoVelocityX = 1;
     logoVelocityY = 1;
 
-    // random logo direction
+    //random logo direction
     if (Math.floor(Math.random() * 2) === 0) {
         logoVelocityX = -logoVelocityX;
     }
@@ -103,7 +102,7 @@
                             }
                         case "KeyW":
                         case "ArrowUp":
-                            //Make logo change direction to upwards, if the ball is moving downwards
+                            //Make logo change direction to upwards, if the logo is moving downwards
                             if (logoVelocityY > 0) {
                                 scoreCounter += 1;
                                 recentFlag = true;
@@ -117,7 +116,7 @@
                             }
                         case "KeyA":
                         case "ArrowLeft":
-                            //Make logo change direction to left, if the ball is moving right
+                            //Make logo change direction to left, if the logo is moving right
                             if (logoVelocityX > 0) {
                                 scoreCounter += 1;
                                 recentFlag = true;
@@ -131,7 +130,7 @@
                             }
                         case "KeyD":
                         case "ArrowRight":
-                            //Make logo change direction to right, if the ball is moving left
+                            //Make logo change direction to right, if the logo is moving left
                             if (logoVelocityX < 0) {
                                 scoreCounter += 1;
                                 recentFlag = true;
@@ -253,7 +252,6 @@
         document.querySelector("#score").style.display = "none";
     })
 
-
 //--------------------------
 //-- end helper functions --
 //--------------------------
@@ -296,7 +294,7 @@
                     currentLogo.src = changeCurrentLogo();
                 }
                 //checking if logo position is more than the width of the canvas and if velocity is more than 0
-                if (logoPositionX + logoWidth / 2 > canvas.width && logoVelocityX > 0) { // corner hit detection check
+                if (logoPositionX + logoWidth / 2 > canvas.width && logoVelocityX > 0) { //corner hit detection check
                     //quad 1
                     yBoundsFlag === true && drawConfetti(1);
                     xBoundsFlag = true;
@@ -316,7 +314,7 @@
                     logoVelocityY = -logoVelocityY;
                     currentLogo.src = changeCurrentLogo();
                 }
-                if (logoPositionY + logoHeight / 2 > canvas.height && logoVelocityY > 0) {  // corner hit detection check
+                if (logoPositionY + logoHeight / 2 > canvas.height && logoVelocityY > 0) {  //corner hit detection check
                     //quad 2
                     xBoundsFlag === true && drawConfetti(2);
                     yBoundsFlag = true;
@@ -352,7 +350,6 @@
         window.requestAnimationFrame(update);
     }
     window.requestAnimationFrame(update);
-
 
 //--------------------
 // -- end game loop --
