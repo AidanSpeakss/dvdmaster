@@ -25,7 +25,7 @@
 
     //array of dvd logo img's (experimenting with storing in data uri right now)
     let currentLogo = new Image();
-    let arrLogoImages = ["dvdLogo1.png", "dvdLogo2.png", "dvdLogo3.png", "dvdLogo4.png", "dvdLogo5.png"]
+    const arrLogoImages = ["dvdLogo1.png", "dvdLogo2.png", "dvdLogo3.png", "dvdLogo4.png", "dvdLogo5.png"]
     currentLogo.src = arrLogoImages[(Math.floor(Math.random() * 4 + 1))]; //gets random color to start game with
 
     //logo size
